@@ -1,0 +1,1 @@
+export { ViewProfilePopUp } from "./profileShowPop"

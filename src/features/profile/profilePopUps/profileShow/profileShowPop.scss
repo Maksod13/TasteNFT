@@ -1,0 +1,175 @@
+.profile {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    border-radius: 12px;
+    box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(48, 54, 61);
+    width: 267px;
+    height: auto;
+    z-index: 10;
+    transition: top 1s ease;
+
+    .profile__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px 10px;
+
+
+        .profile___inner--headline {
+            display: flex;
+            height: auto;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 245px;
+            width: 100%;
+
+            .profile__inner--img {
+                // width: 40px;
+                // height: 40px;
+                // background-color: beige;
+                border-radius: 12px;
+            }
+
+            .inner__headline {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-end;
+
+                .inner__headline--name {
+                    color: rgb(255, 255, 255);
+                    font-family: Raleway;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 19px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+
+                .inner__headline--info {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .headline__info--username {
+                        background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(216, 194, 255));
+                        -webkit-background-clip:
+                            text;
+                        -webkit-text-fill-color:
+                            transparent;
+                        background-clip:
+                            text;
+                        font-family: Raleway;
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 14px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+
+                    .headline__info--balance {
+                        display: flex;
+                        align-items: center;
+
+                        .info__balance--text {
+                            color: rgba(255, 255, 255, 0.5);
+                            font-family: Raleway;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 14px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+
+                        .number {
+                            color: rgb(255, 255, 255);
+                            font-family: Raleway;
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 14px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            .profileCloseBtn {
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                width: 12px;
+                transition: transform 0.3s, box-shadow 0.3s;
+
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .profile__inner--adress {
+            margin-top: 16px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: Raleway;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+
+        .profile__inner--buttons {
+            margin-top: 7px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .inner__buttons--profile {
+                color: rgb(255, 255, 255);
+                padding: 0;
+                font-family: Raleway;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0%;
+                text-align: left;
+                width: 140px;
+                height: 18px;
+                background: none;
+                cursor: pointer;
+                border: none;
+                transition: transform 0.3s, box-shadow 0.3s;
+
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: none;
+                }
+            }
+
+            .red__color {
+                color: rgb(255, 94, 84);
+            }
+        }
+    }
+}
+
+.profile.show {
+    top: 55px;
+    /* Конечная позиция попапа */
+}
