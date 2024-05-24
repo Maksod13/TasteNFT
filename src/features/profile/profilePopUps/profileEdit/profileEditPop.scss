@@ -1,7 +1,286 @@
 .edit {
-    width: 500px;
-    background-color: chocolate;
-    position: absolute;
-    top: 100px;
+    border-radius: 32px;
+    box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(48, 54, 61);
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: calc(100% - 40px);
+    padding: 25px 24px 20px;
+    max-height: calc(100vh - 80px - 60px);
+    width: 653px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
 
+    .edit__inner--headline {
+
+        color: rgb(255, 255, 255);
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0%;
+        text-align: center;
+        position: relative;
+
+        .edit__close--button {
+            position: absolute;
+            cursor: pointer;
+            background: none;
+            border: none;
+            top: 0px;
+            right: 30px;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    .edit__inner {
+        padding-top: 10px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+            background-color: bisque;
+            border-radius: 4px;
+            visibility: hidden;
+        }
+
+        .edit__inner--section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 24px;
+
+            .inner__section--field {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 294px;
+                gap: 8px;
+
+                .section__field--label {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-family: Raleway;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+
+                .section__box {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .section__field--input {
+                    border-radius: 8px;
+                    color: white;
+                    background: rgb(29, 34, 40);
+                    width: 100%;
+                    border: none;
+                    height: 40px;
+                }
+            }
+
+            .inner__section--info {
+                color: rgba(255, 255, 255, 0.5);
+                font-family: Raleway;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+                text-align: left;
+                width: 100%;
+                max-width: 295px;
+            }
+        }
+
+        .edit__inner--bio {
+            margin-top: 24px;
+
+            .inner__section--field {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .section__field--label {
+                    color: rgba(255, 255, 255, 0.5);
+                    font-family: Raleway;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+
+                .section__field--bio {
+                    border-radius: 8px;
+                    background: rgb(29, 34, 40);
+                    color: white;
+                    width: 100%;
+                    border: none;
+                    height: 120px;
+                }
+            }
+        }
+
+        .edit__inner--image {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            margin-top: 24px;
+
+            .section__field--label {
+                color: rgba(255, 255, 255, 0.5);
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .inner__image--input {
+                border-radius: 16px;
+                width: 100%;
+                max-width: 294px;
+                height: 120px;
+                box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
+                background: rgb(29, 34, 40);
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: 20px;
+                gap: 18px;
+
+                .image__input {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 99px;
+                    background: rgb(243, 244, 245);
+                }
+
+                .image__input--inner {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3px;
+
+                    .input__inner--text {
+                        color: rgba(255, 255, 255, 0.5);
+                        font-family: Raleway;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+
+                    .input__inner--btn {
+                        color: rgb(255, 94, 84);
+                        font-family: Raleway;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+
+        .edit__inner--contacts {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            margin-top: 24px;
+
+            .inner__contacts--name {
+                color: rgba(255, 255, 255, 0.5);
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .inner__contacts--icon {
+                display: flex;
+                gap: 32px;
+
+                .contacts__icon--info {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 90px;
+
+                    .icon__info--name {
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                        text-align: left;
+
+                    }
+                }
+
+                .contacts__icon--input {
+                    border-radius: 8px;
+                    background: rgb(29, 34, 40);
+                    height: 40px;
+                    max-width: 500px;
+                    width: 100%;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+
+        .edit__inner--save {
+            margin: 0 auto;
+            margin-top: 24px;
+            border-radius: 12px;
+            max-width: 157px;
+            border: none;
+            width: 100%;
+            height: 40px;
+            box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
+            background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(65, 54, 241) 100%);
+            color: rgb(255, 255, 255);
+            font-family: Raleway;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
 }

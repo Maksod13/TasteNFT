@@ -33,6 +33,7 @@ export const ProfileButton: React.FC = () => {
             </button>
             {isProfilePopUpOpen && <ViewProfilePopUp onClose={handleCloseProfilePopUp} onEditProfile={handleOpenEditProfile} />}
             {isEditProfileOpen && <EditProfile onClose={handleCloseEditProfile} />}
+            {isEditProfileOpen && <div className="blurOverlay" />}
         </>
     );
 };
