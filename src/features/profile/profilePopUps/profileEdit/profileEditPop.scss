@@ -1,3 +1,4 @@
+@import "../../../../app/styles/breackpoints.scss";
 .edit {
     border-radius: 32px;
     box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.05);
@@ -15,7 +16,6 @@
     z-index: 10;
 
     .edit__inner--headline {
-
         color: rgb(255, 255, 255);
         font-family: Raleway;
         font-size: 24px;
@@ -282,5 +282,11 @@
                 box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
             }
         }
+    }
+}
+
+@media (max-width: $sm){
+    .edit .edit__inner--headline .edit__close--button{
+        right: 10px;
     }
 }
