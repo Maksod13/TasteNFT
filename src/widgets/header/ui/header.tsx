@@ -30,7 +30,7 @@ export const HeaderComponent = () => {
         <ProfileButton />
       </div>
       {isWalletOpen && <Wallet onClose={handleCloseWallet} />}
-      {isWalletOpen && <div className="blurOverlay" />} {/* Добавляем blurOverlay */}
+      {isWalletOpen && <div className="blurOverlay" />}
     </header>
   );
 };
