@@ -3,9 +3,12 @@
     width: 100%;
     overflow: hidden;
     height: auto;
-    padding-bottom: 34px;
+
 }
 
+.swiper {
+    padding-bottom: 34px !important;
+}
 
 .my-slider__slide {
     max-width: 519px;

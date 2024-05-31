@@ -1,175 +1,215 @@
-.home {
-    display: flex;
-    gap: 16px;
-    align-items: flex-end;
-    max-width: 1366px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-top: 35px;
-
-    .home__profile {
-        max-width: 520px;
+.main {
+    .home {
+        display: flex;
+        gap: 16px;
+        align-items: flex-end;
+        max-width: 1366px;
         width: 100%;
-        margin-bottom: 30px;
+        margin: 0 auto;
+        padding: 0 24px;
+        margin-top: 35px;
 
-        .profile__user {
-            display: flex;
-            max-width: 160px;
-            justify-content: space-between;
-            align-items: center;
+        .home__profile {
+            max-width: 520px;
             width: 100%;
+            margin-bottom: 30px;
 
-
-            .profile__user-image {
-                object-fit: cover;
-            }
-
-            .profile__user-name {
+            .profile__user {
                 display: flex;
-                flex-direction: column;
-                gap: 4px;
+                max-width: 160px;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
 
-                .user__name-name {
-                    color: rgb(255, 255, 255);
-                    font-family: Raleway;
-                    font-size: 18px;
-                    font-weight: 700;
-                    line-height: 21px;
-                    letter-spacing: 0%;
-                    text-align: left;
+
+                .profile__user-image {
+                    object-fit: cover;
                 }
 
-                .user__name-username {
-                    background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(216, 194, 255));
-                    -webkit-background-clip:
-                        text;
-                    -webkit-text-fill-color:
-                        transparent;
-                    background-clip:
-                        text;
-                    font-family: Raleway;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 16px;
-                    letter-spacing: 0%;
-                    text-align: left;
+                .profile__user-name {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    .user__name-name {
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 21px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+
+                    .user__name-username {
+                        background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(216, 194, 255));
+                        -webkit-background-clip:
+                            text;
+                        -webkit-text-fill-color:
+                            transparent;
+                        background-clip:
+                            text;
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .home__profile--headline {
+                color: rgb(255, 255, 255);
+                font-family: Raleway;
+                padding-top: 20px;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 38px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .home__profile-desc {
+                padding-top: 12px;
+                color: rgb(255, 255, 255);
+                font-family: Raleway;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .home__profile-link {
+                padding-top: 16px;
+                display: flex;
+                justify-content: space-between;
+
+                .profile__link-sold {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+
+                    .link__sold-text {
+                        color: rgba(255, 255, 255, 0.5);
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 16px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+
+                    .number {
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 19px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                    }
+                }
+
+                .profile__link-btns {
+                    display: flex;
+                    gap: 8px;
+                    max-width: 250px;
+                    width: 100%;
+
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .link__btns-view {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 16px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        width: 97px;
+                        height: 40px;
+                        border-radius: 12px;
+                        box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
+                        background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(65, 54, 241) 100%);
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                        }
+
+                        &:active {
+                            transform: translateY(0);
+                            box-shadow: none;
+                        }
+                    }
+
+                    .link__btns-small {
+                        width: 40px;
+                        height: 40px;
+                        box-sizing: border-box;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 12px;
+                        background: none;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                        }
+
+                        &:active {
+                            transform: translateY(0);
+                            box-shadow: none;
+                        }
+                    }
                 }
             }
         }
 
-        .home__profile--headline {
+    }
+
+    .card__section {
+        max-width: 1366px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+        margin-top: 78px;
+
+        .card__content {
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 16px;
+            width: 100%;
+            margin-top: 24px;
+
+        }
+    }
+
+    .user__section {
+        margin: 0 auto;
+        max-width: 1366px;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 24px;
+        margin-top: 80px;
+
+        .user__section-headline {
             color: rgb(255, 255, 255);
             font-family: Raleway;
-            padding-top: 20px;
             font-size: 32px;
             font-weight: 700;
             line-height: 38px;
             letter-spacing: 0%;
             text-align: left;
         }
-
-        .home__profile-desc {
-            padding-top: 12px;
-            color: rgb(255, 255, 255);
-            font-family: Raleway;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0%;
-            text-align: left;
-        }
-
-        .home__profile-link {
-            padding-top: 16px;
-            display: flex;
-            justify-content: space-between;
-
-            .profile__link-sold {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-
-                .link__sold-text {
-                    color: rgba(255, 255, 255, 0.5);
-                    font-family: Raleway;
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 16px;
-                    letter-spacing: 0%;
-                    text-align: left;
-                }
-
-                .number {
-                    color: rgb(255, 255, 255);
-                    font-family: Raleway;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 19px;
-                    letter-spacing: 0%;
-                    text-align: left;
-                }
-            }
-
-            .profile__link-btns {
-                display: flex;
-                gap: 8px;
-                max-width: 250px;
-                width: 100%;
-
-                justify-content: space-between;
-                align-items: center;
-
-                .link__btns-view {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: none;
-                    color: rgb(255, 255, 255);
-                    font-family: Raleway;
-                    font-size: 14px;
-                    font-weight: 700;
-                    line-height: 16px;
-                    letter-spacing: 0%;
-                    text-align: left;
-                    width: 97px;
-                    height: 40px;
-                    border-radius: 12px;
-                    box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
-                    background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(65, 54, 241) 100%);
-
-                    &:hover {
-                        transform: translateY(-3px);
-                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-                    }
-
-                    &:active {
-                        transform: translateY(0);
-                        box-shadow: none;
-                    }
-                }
-
-                .link__btns-small {
-                    width: 40px;
-                    height: 40px;
-                    box-sizing: border-box;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    border-radius: 12px;
-                    background: none;
-
-                    &:hover {
-                        transform: translateY(-3px);
-                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-                    }
-
-                    &:active {
-                        transform: translateY(0);
-                        box-shadow: none;
-                    }
-                }
-            }
-        }
     }
-
 }

@@ -1,0 +1,25 @@
+.creators-slider {
+    width: 100%;
+    margin-top: 24px;
+
+    & .swiper {
+        overflow: visible;
+        padding-bottom: 24px;
+    }
+
+    & .swiper-slide {
+        max-width: 245px;
+        width: 100%;
+    }
+
+    & .swiper-scrollbar {
+        left: 0 !important;
+        right: 0 !important;
+        height: 5px !important;
+        width: 100% !important;
+    }
+
+    & .swiper-scrollbar-drag {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
