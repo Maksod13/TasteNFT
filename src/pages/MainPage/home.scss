@@ -1,3 +1,5 @@
+@import "../../app/styles/breackpoints.scss";
+
 .main {
     .home {
         display: flex;
@@ -211,5 +213,54 @@
             letter-spacing: 0%;
             text-align: left;
         }
+    }
+}
+
+@media (max-width: $xxl) {
+    .main .card__section .card__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: $lg) {
+    .main .card__section .card__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .main .home .home__profile {
+        order: 2;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: $sm) {
+    .main .card__section .card__content {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .main .card__section {
+        text-align: center;
+    }
+}
+
+@media (max-width: $sm) {
+    .main .home .home__profile .home__profile-link {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main .card__section .dropdown {
+        margin-right: 0;
     }
 }

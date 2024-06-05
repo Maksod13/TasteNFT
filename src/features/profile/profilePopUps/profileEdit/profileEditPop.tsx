@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import "./profileEditPop.scss"
 import { CarbonCloseOutline } from "../../profileSvgIcon/prodileEditCloseSvgIcon"
 
@@ -8,6 +8,15 @@ interface EditProfileProps {
 
 
 export const EditProfile: FC<EditProfileProps> = ({ onClose }) => {
+    useEffect(() => {
+
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, []);
+
     return (
         <div className="edit">
             <div className="edit__inner--headline">Edit your Profile

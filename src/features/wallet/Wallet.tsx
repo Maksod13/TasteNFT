@@ -1,5 +1,5 @@
 import "./wallet.scss"
-import React, { FC, useState } from "react"
+import React, { FC, useState, useEffect } from "react"
 import { IcSharpClose1 } from "../../shared/ui/closeBtn/closebtn"
 
 interface closeWallet {
@@ -18,6 +18,14 @@ export const Wallet: FC<closeWallet> = ({ onClose }) => {
         setIsSvgVisible(true);
         setIsBtnVisible(false);
     };
+    useEffect(() => {
+
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, []);
 
     return (
         <div className="wallet">

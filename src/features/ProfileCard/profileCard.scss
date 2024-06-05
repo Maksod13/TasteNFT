@@ -1,3 +1,5 @@
+@import "../../app/styles/breackpoints.scss";
+
 .card {
     max-width: 317px;
     width: 100%;
@@ -115,3 +117,19 @@
         }
     }
 }
+
+@media (max-width: $xxl) {
+    .card {
+        max-width: 100%;
+        height: auto;
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: $sm){
+    .card{
+        max-width: 370px;
+        margin: auto;
+    }
+}
+
