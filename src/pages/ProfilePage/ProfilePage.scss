@@ -1,25 +1,22 @@
-@import "../../app/styles/breackpoints.scss";
+.profilePage {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 20px;
+    margin-bottom: 20px;
 
-.main {
-    .home {
-        display: flex;
-        gap: 16px;
-        align-items: flex-end;
-        max-width: 1366px;
+    .home__profile {
         width: 100%;
-        margin: 0 auto;
-        padding: 0 24px;
-        margin-top: 35px;
+        margin-bottom: 30px;
 
-        .home__profile {
-            max-width: 520px;
-            width: 100%;
-            margin-bottom: 30px;
+        .profile__user-inner {
+            display: flex;
+            justify-content: space-between;
 
             .profile__user {
                 display: flex;
-                max-width: 160px;
-                justify-content: space-between;
+                gap: 8px;
                 align-items: center;
                 width: 100%;
 
@@ -27,6 +24,7 @@
                 .profile__user-image {
                     object-fit: cover;
                 }
+
 
                 .profile__user-name {
                     display: flex;
@@ -61,64 +59,13 @@
                 }
             }
 
-            .home__profile--headline {
-                color: rgb(255, 255, 255);
-                font-family: Raleway;
-                padding-top: 20px;
-                font-size: 32px;
-                font-weight: 700;
-                line-height: 38px;
-                letter-spacing: 0%;
-                text-align: left;
-            }
-
-            .home__profile-desc {
-                padding-top: 12px;
-                color: rgb(255, 255, 255);
-                font-family: Raleway;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 18px;
-                letter-spacing: 0%;
-                text-align: left;
-            }
-
             .home__profile-link {
-                padding-top: 16px;
                 display: flex;
                 justify-content: space-between;
-
-                .profile__link-sold {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 5px;
-
-                    .link__sold-text {
-                        color: rgba(255, 255, 255, 0.5);
-                        font-family: Raleway;
-                        font-size: 14px;
-                        font-weight: 600;
-                        line-height: 16px;
-                        letter-spacing: 0%;
-                        text-align: left;
-                    }
-
-                    .number {
-                        color: rgb(255, 255, 255);
-                        font-family: Raleway;
-                        font-size: 16px;
-                        font-weight: 600;
-                        line-height: 19px;
-                        letter-spacing: 0%;
-                        text-align: left;
-                    }
-                }
 
                 .profile__link-btns {
                     display: flex;
                     gap: 8px;
-                    max-width: 250px;
                     width: 100%;
 
                     justify-content: space-between;
@@ -173,95 +120,92 @@
                     }
                 }
             }
-        }
-
-    }
-
-    .card__section {
-        max-width: 1366px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 24px;
-        margin-top: 78px;
-
-        .card__content {
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, auto);
-            gap: 16px;
-            width: 100%;
-            margin-top: 24px;
 
         }
-    }
 
-    .user__section {
-        margin: 0 auto;
-        max-width: 1366px;
-        width: 100%;
-        overflow: hidden;
-        padding: 0 24px;
-        margin-top: 80px;
-
-        .user__section-headline {
+        .home__profile--headline {
             color: rgb(255, 255, 255);
             font-family: Raleway;
+            padding-top: 20px;
             font-size: 32px;
             font-weight: 700;
             line-height: 38px;
             letter-spacing: 0%;
             text-align: left;
         }
+
+        .edit__inner--contacts {
+            display: flex;
+            gap: 26px;
+            margin-top: 24px;
+
+            .inner__contacts--name {
+                color: rgba(255, 255, 255, 0.5);
+                font-family: Raleway;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 19px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+
+            .inner__contacts--icon {
+                display: flex;
+                gap: 32px;
+
+                .contacts__icon--info {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 90px;
+
+                    .icon__info--name {
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                        text-align: left;
+
+                    }
+                }
+
+                .contacts__icon--input {
+                    border-radius: 8px;
+                    background: rgb(29, 34, 40);
+                    height: 40px;
+                    max-width: 500px;
+                    width: 100%;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+
+        .home__profile-desc {
+            padding-top: 12px;
+            color: rgb(255, 255, 255);
+            font-family: Raleway;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: left;
+            max-width: 1061px;
+            width: 100%;
+        }
     }
-}
 
-@media (max-width: $xxl) {
-    .main .card__section .card__content {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .card__content {
 
-}
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 16px;
+        width: 100%;
+        margin-top: 24px;
 
-@media (max-width: $lg) {
-    .main .card__section .card__content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .main .home {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 40px;
-    }
-
-    .main .home .home__profile {
-        order: 2;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: $sm) {
-    .main .card__section .card__content {
-        grid-template-columns: repeat(1, 1fr);
-
-    }
-
-    .main .card__section {
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: $sm) {
-    .main .home .home__profile .home__profile-link {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .main .card__section .dropdown {
-        margin-right: 0;
     }
 }

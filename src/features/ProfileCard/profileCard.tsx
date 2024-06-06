@@ -1,5 +1,7 @@
 import React from 'react';
 import "./profileCard.scss"
+import { Link } from 'react-router-dom';
+
 
 interface ProfileCardProps {
     cardImgSrc?: string;
@@ -15,7 +17,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
     username = "",
 }) => {
     return (
-        <div className="card">
+        <Link to="/about" className="card">
             <div className="card__img">
                 <img src={cardImgSrc} alt="" className="card__img-art" />
                 <div className="card__img-info">
@@ -44,6 +46,6 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
