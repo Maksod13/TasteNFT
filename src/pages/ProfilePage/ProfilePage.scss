@@ -1,3 +1,5 @@
+@import "../../app/styles/breackpoints.scss";
+
 .profilePage {
     max-width: 1366px;
     width: 100%;
@@ -67,9 +69,58 @@
                     display: flex;
                     gap: 8px;
                     width: 100%;
-
                     justify-content: space-between;
                     align-items: center;
+
+                    .followers {
+                        background: none;
+                        border: none;
+                        display: flex;
+                        justify-content: flex-start;
+                        cursor: pointer;
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                        text-align: left;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                        }
+
+                        &:active {
+                            transform: translateY(0);
+                            box-shadow: none;
+                        }
+                    }
+
+                    .following {
+                        background: none;
+                        border: none;
+                        display: flex;
+                        justify-content: flex-start;
+                        cursor: pointer;
+                        color: rgb(255, 255, 255);
+                        font-family: Raleway;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        letter-spacing: 0%;
+                        text-align: left;
+
+                        &:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+                        }
+
+                        &:active {
+                            transform: translateY(0);
+                            box-shadow: none;
+                        }
+                    }
 
                     .link__btns-view {
                         display: flex;
@@ -88,6 +139,7 @@
                         border-radius: 12px;
                         box-shadow: 0px 15px 30px 0px rgba(20, 102, 204, 0.16);
                         background: linear-gradient(270.00deg, rgb(135, 67, 255), rgb(65, 54, 241) 100%);
+                        cursor: pointer;
 
                         &:hover {
                             transform: translateY(-3px);
@@ -107,6 +159,7 @@
                         border: 1px solid rgba(255, 255, 255, 0.1);
                         border-radius: 12px;
                         background: none;
+                        cursor: pointer;
 
                         &:hover {
                             transform: translateY(-3px);
@@ -199,7 +252,6 @@
     }
 
     .card__content {
-
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -208,4 +260,46 @@
         margin-top: 24px;
 
     }
+
+    
 }
+
+@media (max-width: $xxl) {
+    .profilePage .card__content {
+        grid-template-columns: repeat(3, 1fr)
+    }
+}
+
+@media (max-width: $md) {
+    .profilePage .card__content {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width: $km) {
+    .profilePage .home__profile .profile__user-inner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: $xs) {
+    .profilePage .card__content {
+        grid-template-columns: repeat(1, 1fr)
+    }
+
+    .profilePage .home__profile .edit__inner--contacts {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .profilePage .home__profile .profile__user-inner {
+        gap: 20px;
+    }
+
+    .profilePage .home__profile .profile__user-inner .home__profile-link .profile__link-btns {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+}
+

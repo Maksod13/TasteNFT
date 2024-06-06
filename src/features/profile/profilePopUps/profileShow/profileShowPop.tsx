@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import { FC, useState } from 'react';
+import React, { useEffect, FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './profileShowPop.scss';
 
 interface ViewProfilePopUpProps {
     onClose: () => void;
     onEditProfile: () => void;
+    onCreateArtwork: () => void;
 }
 
-export const ViewProfilePopUp: FC<ViewProfilePopUpProps> = ({ onClose, onEditProfile }) => {
+export const ViewProfilePopUp: FC<ViewProfilePopUpProps> = ({ onClose, onEditProfile, onCreateArtwork }) => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -18,6 +18,11 @@ export const ViewProfilePopUp: FC<ViewProfilePopUpProps> = ({ onClose, onEditPro
     const handleEditProfileClick = () => {
         setIsVisible(false);
         onEditProfile();
+    };
+
+    const handleCreateArtworkClick = () => {
+        setIsVisible(false);
+        onCreateArtwork();
     };
 
     return (
@@ -42,6 +47,7 @@ export const ViewProfilePopUp: FC<ViewProfilePopUpProps> = ({ onClose, onEditPro
                     <Link to="/profile">
                         <button className='inner__buttons--profile'>My profile</button>
                     </Link>
+                    <button className='inner__buttons--profile' onClick={handleCreateArtworkClick}>Create Artwork</button>
                     <button className='inner__buttons--profile'>Balance settings</button>
                     <button className='inner__buttons--profile' onClick={handleEditProfileClick}>Edit profile</button>
                     <button className='inner__buttons--profile red__color'>Log out</button>

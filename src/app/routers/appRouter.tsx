@@ -13,7 +13,7 @@ export const AppRouter = () => {
                 <Route index element={<Home />} />
                 <Route path="/about" Component={About} />
                 <Route path="/" Component={ProfileCard} />
-                <Route path="/" element={<ViewProfilePopUp onClose={() => { }} onEditProfile={() => { }} />} />
+                <Route path="/" element={<ViewProfilePopUp onClose={() => { }} onEditProfile={() => { }} onCreateArtwork={() => { }} />} />
                 <Route path="/profile" element={<ProfilePage />} />
             </Route>
         </Routes>

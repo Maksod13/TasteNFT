@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./ProfilePage.scss"
 import { ProfileCard } from '../../features/ProfileCard';
+import { Follow } from '../../features/profile/Follow';
 
 export const ProfilePage: React.FC = () => {
+    const [isFollowersPopupOpen, setIsFollowersPopupOpen] = useState(false);
+
+    const toggleFollowersPopup = () => {
+        setIsFollowersPopupOpen(!isFollowersPopupOpen);
+    };
+
+    useEffect(() => {
+        if (isFollowersPopupOpen) {
+            document.body.classList.add('blur');
+        } else {
+            document.body.classList.remove('blur');
+        }
+    }, [isFollowersPopupOpen]);
+
     return (
         <div className='profilePage'>
             <div className="home__profile">
@@ -16,7 +31,8 @@ export const ProfilePage: React.FC = () => {
                     </div>
                     <div className="home__profile-link">
                         <div className="profile__link-btns">
-                            <button className='followers'>234 Followers</button>
+                            <button className='followers active' onClick={toggleFollowersPopup}>234 Followers</button>
+                            {isFollowersPopupOpen && <Follow onClose={toggleFollowersPopup} />}
                             <button className='following'>15 Following</button>
                             <button className='link__btns-view'>Follow</button>
                             <button className='link__btns-small'><svg width="15.839111" height="15.839355" viewBox="0 0 15.8391 15.8394" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

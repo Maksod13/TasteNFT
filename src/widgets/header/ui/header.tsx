@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import { Button } from "../../../shared/ui/button";
 import { SearchInput } from "../../../features/input";
 import { Logo } from "../../../shared/ui/logo";
@@ -20,13 +21,16 @@ export const HeaderComponent = () => {
   return (
     <header className="Header">
       <div className="header__inner container">
-        <Logo src="../images/TasteNFT_logo.png" alt="Logo" />
+        <Link to="/">
+          <Logo src="../images/TasteNFT_logo.png" alt="Logo" />
+        </Link>
         <SearchInput onSearch={() => console.log("Search")} />
         <Button
-          children="Connect wallet"
           classname="header__connect--button"
           onClick={handleOpenWallet}
-        />
+        >
+          Connect wallet
+        </Button>
         <ProfileButton />
       </div>
       {isWalletOpen && <Wallet onClose={handleCloseWallet} />}
