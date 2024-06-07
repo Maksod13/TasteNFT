@@ -1,1 +1,0 @@
-export { UserSlider } from "./userSlider"
